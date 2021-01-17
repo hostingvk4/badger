@@ -6,58 +6,46 @@
     <title>Base page</title>
     <link rel="stylesheet" href="css/base.css">
     <style>
-        /*the container must be positioned relative:*/
-        .custom-select {
-            position: relative;
-            font-family: Arial;
-        }
         .custom-select select {
             display: none; /*hide original SELECT element:*/
         }
-        .select-selected {
-            background-color: DodgerBlue;
-        }
-        /*style the arrow inside the select element:*/
-        .select-selected:after {
-            position: absolute;
-            content: "";
-            top: 14px;
-            right: 10px;
-            width: 0;
-            height: 0;
-            border: 6px solid transparent;
-            border-color: #fff transparent transparent transparent;
-        }
-        /*point the arrow upwards when the select box is open (active):*/
-        .select-selected.select-arrow-active:after {
-            border-color: transparent transparent #fff transparent;
-            top: 7px;
-        }
+
         /*style the items (options), including the selected item:*/
-        .select-items div,.select-selected {
+        .select-items div {
             color: #ffffff;
             padding: 8px 16px;
-            border: 1px solid transparent;
-            border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
             cursor: pointer;
             user-select: none;
         }
-        /*style items (options):*/
-        .select-items {
-            position: absolute;
-            background-color: DodgerBlue;
-            top: 100%;
-            left: 0;
-            right: 0;
-            z-index: 99;
+
+        .affairs-menu {
+            display: flex;
+            justify-content: center;
         }
-        /*hide the items when the select box is closed:*/
-        .select-hide {
-            display: none;
+
+        .affairs-menu > div {
+            margin: .2em;
+            width: 100%;
+            text-align: center;
+            font-size: 2em;
+            border: 1px solid #dcdfe6;
+            border-radius: 3px;
         }
-        .select-items div:hover, .same-as-selected {
-            background-color: rgba(0, 0, 0, 0.1);
+
+        .affairs-menu > div:hover {
+            background-color: #fcfc1b;
+            cursor: pointer;
         }
+
+        .affairs {
+            font-size: 1em;
+            border: 1px solid #dcdfe6;
+            border-radius: 3px;
+            margin: .2em;
+            padding: .2em;
+        }
+
+
     </style>
 </head>
 <body>
@@ -84,28 +72,23 @@
         </nav>
     </div>
 </header>
-<br>
-<br>
-<br>
-<br>
-<br>
 <div class="container">
-    <div class="custom-select">
-        <select>
-            <option value="0">Select car:</option>
-            <option value="1">Audi</option>
-            <option value="2">BMW</option>
-            <option value="3">Citroen</option>
-            <option value="4">Ford</option>
-            <option value="5">Honda</option>
-            <option value="6">Jaguar</option>
-            <option value="7">Land Rover</option>
-            <option value="8">Mercedes</option>
-            <option value="9">Mini</option>
-            <option value="10">Nissan</option>
-            <option value="11">Toyota</option>
-            <option value="12">Volvo</option>
-        </select>
+    <div class="affairs-menu">
+        <div>Задачи</div>
+        <div>Питание</div>
+        <div>Спорт</div>
+    </div>
+    <div class="affairs">
+        <p>sport</p>
+    </div>
+    <div class="affairs">
+        <p>sport</p>
+    </div>
+    <div class="affairs">
+        <p>sport</p>
+    </div>
+    <div class="affairs">
+        <p>sport</p>
     </div>
 </div>
 </body>
